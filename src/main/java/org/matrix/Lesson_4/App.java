@@ -1,4 +1,4 @@
-package org.example;
+package org.matrix.Lesson_4;
 
 /**
  * Hello world!
