@@ -1,9 +1,8 @@
 package org.matrix.Lesson_3;
 
+
 public class App {
     public static void main(String[] args) {
-
-
 
          if (5==5 && 11==10){
              System.out.println("Ikisi de odendi");

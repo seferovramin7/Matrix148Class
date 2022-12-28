@@ -17,4 +17,14 @@ public class YukMashin {
     public void setVolumeOfEngine(int volumeOfEngine) {
         this.volumeOfEngine = volumeOfEngine;
     }
+
+
+    @Override
+    public String toString() {
+        return "YukMashin{" +
+                "typeOfVehicle='" + typeOfVehicle + '\'' +
+                ", typeOfEngine='" + typeOfEngine + '\'' +
+                ", volumeOfEngine=" + volumeOfEngine +
+                '}';
+    }
 }
