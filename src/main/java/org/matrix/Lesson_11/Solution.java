@@ -18,10 +18,4 @@ class Solution {
         return numbers[length - 1];
     }
 
-    public static void main(String[] args) {
-        int[] numbers = {1,2,1,3,3,2,4,4,5};
-        int i = singleNumber(numbers);
-        System.out.println(i);
-
-    }
 }
