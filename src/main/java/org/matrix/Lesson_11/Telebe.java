@@ -1,7 +1,7 @@
 package org.matrix.Lesson_11;
 
 public class Telebe {
-     String university = "Quincy";
+    static String university = "Quincy";
     int siraNomresi;
     String ad;
 
