@@ -1,0 +1,3 @@
+-  Lesson 12:
+    - [x] Tight coupling, Loose coupling
+     - 
