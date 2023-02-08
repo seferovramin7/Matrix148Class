@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadFile {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         try {
             File myObj = new File("src/main/java/org/matrix/Lesson_17/filename.txt");
             Scanner myReader = new Scanner(myObj);
@@ -14,9 +14,9 @@ public class ReadFile {
                 System.out.println(100 / i);
             }
             myReader.close();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("Nese sehvlik var!");
-            e.printStackTrace();
+             throw new MushteriTapilmadiException();
         }
     }
 }
