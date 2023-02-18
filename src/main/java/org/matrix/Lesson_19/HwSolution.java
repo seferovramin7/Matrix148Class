@@ -7,21 +7,27 @@ public class HwSolution {
 
     public static void main(String[] args) {
 
-        String name = "Ramin";
-        name = "Ramin Seferov";
-
-
         HwSolution mt = new HwSolution();
 
         Thread t1 = new Thread(new Runnable() {
             public void run() {
-                mt.printEvenNumber();
+
+                try {
+                    mt.printEvenNumber();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+
             }
         });
 
         Thread t2 = new Thread(new Runnable() {
             public void run() {
-                mt.printOddNumber();
+                try {
+                    mt.printOddNumber();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -29,15 +35,11 @@ public class HwSolution {
         t2.start();
     }
 
-    public void printOddNumber() {
+    public void printOddNumber() throws InterruptedException {
         synchronized (this) {
             while (counter < numberOfDigits) {
                 while (counter % 2 == 0) {
-                    try {
-                        wait();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    wait();
                 }
                 System.out.print(counter + " ");
                 counter++;
@@ -46,19 +48,12 @@ public class HwSolution {
         }
     }
 
-    public void printEvenNumber() {
+    public void printEvenNumber() throws InterruptedException {
         synchronized (this) {
             while (counter < numberOfDigits) {
-
                 while (counter % 2 == 1) {
-                    try {
-                        wait();
-                    } catch (
-                            InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    wait();
                 }
-
                 System.out.print(counter + " ");
                 counter++;
                 notify();
