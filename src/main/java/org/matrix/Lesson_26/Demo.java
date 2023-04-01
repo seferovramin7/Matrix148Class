@@ -57,7 +57,7 @@ class Demo {
 
         // demonstration of forEach method
         number
-                .stream()
+                .stream()dddd
                 .map(x -> x * x)
                 .forEach(y -> System.out.println(y));
 
